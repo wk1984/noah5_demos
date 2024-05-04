@@ -14,14 +14,15 @@ ENV HOME /home/${NB_USER}
 RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
 
 # Make sure the contents of the notebooks directory are in ${HOME}
-# 
+RUN mkdir ${HOME}/case01
+
 # COPY case01/namelist.hrldas ${HOME}/
 # COPY case01/namelist.met ${HOME}/
 # COPY case01/NoahmpTable.TBL ${HOME}/
 # COPY case01/soil_thickness.dat ${HOME}/
 # COPY case01/create_point_data.f90 ${HOME}/
 
-COPY case01/ ${HOME}/
+COPY case01/ ${HOME}/case01
 COPY prepare_forcing.ipynb ${HOME}/
 
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
