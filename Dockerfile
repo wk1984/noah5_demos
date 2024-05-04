@@ -22,7 +22,7 @@ COPY case01/namelist.hrldas ${HOME}/
 COPY case01/namelist.met ${HOME}/
 COPY case01/NoahmpTable.TBL ${HOME}/
 COPY case01/soil_thickness.dat ${HOME}/
-COPY case01/create_point_data.exe ${HOME}/
+COPY /etc/skel/case01/create_point_data.exe ${HOME}/
 
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
  
