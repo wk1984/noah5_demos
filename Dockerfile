@@ -13,17 +13,17 @@ ENV NB_UID 1000
 ENV HOME /home/${NB_USER}
 RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
 
+WORKDIR case01
+RUN make
 RUN pwd
 
 # Make sure the contents of the notebooks directory are in ${HOME}
-RUN cd case01 \
-    make
 
-COPY case01/namelist.hrldas ${HOME}/
-COPY case01/namelist.met ${HOME}/
-COPY case01/NoahmpTable.TBL ${HOME}/
-COPY case01/soil_thickness.dat ${HOME}/
-COPY case01/create_point_data ${HOME}/
+COPY namelist.hrldas ${HOME}/
+COPY namelist.met ${HOME}/
+COPY NoahmpTable.TBL ${HOME}/
+COPY soil_thickness.dat ${HOME}/
+COPY create_point_data ${HOME}/
 
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
 
