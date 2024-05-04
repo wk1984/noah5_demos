@@ -5,9 +5,6 @@ FROM wk1984/hrldas500_2023:latest
 
 USER root
 
-RUN cd case01 \
- && make
-
 # Create user alice with uid 1000
 ARG NB_USER=alice
 ARG NB_UID=1000
