@@ -16,6 +16,8 @@ RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER
 # Make sure the contents of the notebooks directory are in ${HOME}
 COPY * ${HOME}/
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
+RUN cd ${HOME}/ \
+    make
 
 # Switch to the user
 USER ${NB_USER}
