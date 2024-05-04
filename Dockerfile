@@ -5,7 +5,7 @@ FROM wk1984/hrldas500_2023:latest
 
 USER root
 
-CMD cd case01 \
+CMD cd /etc/skel/case01 \
  && make
 
 # Create user alice with uid 1000
