@@ -1,0 +1,15 @@
+COMPILERF90 = gfortran
+FREESOURCE = -ffree-form -ffree-line-length-none
+F90FLAGS = -g -fconvert=big-endian -fbounds-check -fno-range-check -Wno-argument-mismatch
+MODFLAG = -I
+LDFLAGS =
+CPP = cpp
+CPPFLAGS = -P -traditional -D_GFORTRAN_
+LIBS =
+LIBJASPER = -ljpeg -L/usr/lib -ljasper
+INCJASPER = -I/usr/include/jasper
+NETCDFMOD = -I/usr/include
+NETCDFLIB = -L/usr/lib -lnetcdf -lnetcdff
+BZIP2 = NO
+RM = rm -f
+CC = cc
