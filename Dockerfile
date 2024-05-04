@@ -14,8 +14,8 @@ ENV HOME /home/${NB_USER}
 RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER}
 
 WORKDIR case01
-RUN make
-RUN pwd
+# RUN make
+RUN list
 
 # Make sure the contents of the notebooks directory are in ${HOME}
 
