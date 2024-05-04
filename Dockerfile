@@ -21,7 +21,7 @@ RUN adduser --disabled-password --gecos "Default user" --uid ${NB_UID} ${NB_USER
 # COPY case01/soil_thickness.dat ${HOME}/
 # COPY case01/create_point_data.f90 ${HOME}/
 
-COPY case01 ${HOME}/
+COPY case01/ ${HOME}/
 COPY prepare_forcing.ipynb ${HOME}/
 
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
@@ -31,5 +31,7 @@ USER ${NB_USER}
  
 # Start in the home directory of the user
 WORKDIR /home/${NB_USER}
-# 
+
+CMD ["/bin/bash"]
+
 # CMD ["jupyter-lab" ,  "--ip=0.0.0.0"]
