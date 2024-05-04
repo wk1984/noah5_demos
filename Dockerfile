@@ -5,9 +5,6 @@ FROM wk1984/hrldas500_2023:latest
 
 USER root
 
-CMD cd /etc/skel/case01 \
- && make
-
 # Create user alice with uid 1000
 ARG NB_USER=alice
 ARG NB_UID=1000
@@ -22,7 +19,7 @@ COPY case01/namelist.hrldas ${HOME}/
 COPY case01/namelist.met ${HOME}/
 COPY case01/NoahmpTable.TBL ${HOME}/
 COPY case01/soil_thickness.dat ${HOME}/
-COPY /etc/skel/case01/create_point_data.exe ${HOME}/
+COPY case01/create_point_data.f90 ${HOME}/
 
 RUN chown -R ${NB_USER}:${NB_USER} ${HOME}
  
