@@ -1,0 +1,68 @@
+&noahlsm_offline
+    hrldas_setup_file = 'HRLDAS_in/hrldas_setup_single_point.nc'
+    indir = 'HRLDAS_in'
+    outdir = 'HRLDAS_run'
+    start_year = 1998
+    start_month = 12
+    start_day = 31
+    start_hour = 0
+    start_min = 0
+    restart_filename_requested = ''
+    kday = 365
+    spinup_loops = 3
+    forcing_timestep = 86400
+    noah_timestep = 21600
+    output_timestep = 86400
+    split_output_count = 1
+    skip_first_output = .false.
+    restart_frequency_hours = 24
+    nsoil = 96
+    soil_thick_input(1:96) = 0.01, 0.01, 0.02, 0.02, 0.02, 0.02, 0.02, 0.02,
+                             0.02, 0.02, 0.02, 0.05, 0.05, 0.05, 0.05, 0.05,
+                             0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,
+                             0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,
+                             0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05,
+                             0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.05, 0.1,
+                             0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1,
+                             0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1, 0.1,
+                             0.1, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5,
+                             0.5, 0.5, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0, 1.0,
+                             1.0, 1.0, 1.0, 2.0, 2.0, 2.0, 2.0, 2.0, 3.0,
+                             3.0, 3.0, 3.0
+    zlvl = 2.0
+    sf_urban_physics = 0
+    use_wudapt_lcz = 0
+    forcing_name_t = 'T2D'
+    forcing_name_q = 'Q2D'
+    forcing_name_u = 'U2D'
+    forcing_name_v = 'V2D'
+    forcing_name_p = 'PSFC'
+    forcing_name_lw = 'LWDOWN'
+    forcing_name_sw = 'SWDOWN'
+    forcing_name_pr = 'RAINRATE'
+    dynamic_veg_option = 4
+    canopy_stomatal_resistance_option = 1
+    btr_option = 1
+    surface_runoff_option = 3
+    subsurface_runoff_option = 3
+    dvic_infiltration_option = 1
+    surface_drag_option = 1
+    supercooled_water_option = 1
+    frozen_soil_option = 1
+    radiative_transfer_option = 3
+    snow_albedo_option = 1
+    snow_thermal_conductivity = 1
+    pcp_partition_option = 1
+    tbot_option = 1
+    temp_time_scheme_option = 1
+    surface_resistance_option = 1
+    glacier_option = 1
+    soil_data_option = 1
+    pedotransfer_option = 1
+    crop_option = 0
+    irrigation_option = 0
+    irrigation_method = 0
+    tile_drainage_option = 0
+    soil_timestep = 0.0
+    noahmp_output = 0
+/
